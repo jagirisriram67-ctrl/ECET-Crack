@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+const API_URL = 'https://ecet2-ixzw0wsro-elite-earners-95ce1ce6.vercel.app/api';
 
-const api = axios.create({ baseURL: API_BASE });
+const api = axios.create({ baseURL: API_URL });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('admin_token');

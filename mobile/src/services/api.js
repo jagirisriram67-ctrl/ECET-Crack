@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+const API_BASE = 'https://ecet2-ixzw0wsro-elite-earners-95ce1ce6.vercel.app/api';
 const api = axios.create({ baseURL: API_BASE });
 
 api.interceptors.request.use((config) => {
