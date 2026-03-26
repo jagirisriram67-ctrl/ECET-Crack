@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ECET Crack</string>
+    <string name="title_activity_main">ECET Crack</string>
+    <string name="package_name">com.ecetcrack.app</string>
+    <string name="custom_url_scheme">com.ecetcrack.app</string>
+</resources>
