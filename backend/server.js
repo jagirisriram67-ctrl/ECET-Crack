@@ -34,6 +34,10 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ECET Crack API is running! 🚀', timestamp: new Date().toISOString() });
 });
 
+app.get('/', (req, res) => {
+  res.send('<h1>🚀 ECET Crack API is LIVE!</h1><p>Append /api/health to see server status.</p>');
+});
+
 // Error handler
 app.use((err, req, res, next) => {
   console.error(err.stack);
