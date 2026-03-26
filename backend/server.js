@@ -39,11 +39,14 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
 });
-
+// Port
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`\n🚀 ECET Crack API Server running on port ${PORT}`);
-  console.log(`📚 Health Check: http://localhost:${PORT}/api/health\n`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 ECET Crack API Server running on port ${PORT}`);
+    console.log(`📚 Health Check: http://localhost:${PORT}/api/health\n`);
+  });
+}
 
+// Export the Express API for Vercel Serverless Functions
 module.exports = app;
